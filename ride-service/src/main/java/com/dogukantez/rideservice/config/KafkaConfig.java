@@ -16,7 +16,7 @@ public class KafkaConfig {
                 .build();
     }
 
-   
+
     @Bean
     public NewTopic rideMatchedTopic(){
         return TopicBuilder.name("ride.matched")
