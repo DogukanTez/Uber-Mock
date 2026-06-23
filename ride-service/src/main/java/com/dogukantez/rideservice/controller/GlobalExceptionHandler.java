@@ -28,7 +28,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Map<String, String>> handleRuntimeException(
             RuntimeException ex) {
-        log.error("Runtime Exception: {}", ex.getMessage());
+        //log.error("Runtime Exception: {}", ex.getMessage());
+        log.error("Runtime Exception: ", ex);
 
         Map<String, String> errors = new HashMap<>();
         errors.put("error", ex.getMessage());
